@@ -1,0 +1,20 @@
+{
+  "name": "owddm-ruby-in-japan-vs-world",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@iconify-json/logos": "^1.2.3",
+    "@slidev/cli": "^51.4.0",
+    "slidev-theme-envek": "latest",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "playwright": "^1.50.1",
+    "playwright-chromium": "^1.50.1"
+  }
+}

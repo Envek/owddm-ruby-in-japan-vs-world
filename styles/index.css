@@ -1,0 +1,5 @@
+.scaled-image, .scaled-image img, .scaled-image svg {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
