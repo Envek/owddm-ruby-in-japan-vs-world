@@ -4,9 +4,8 @@ theme: envek
 talkDurationMinutes: 25
 progressBarStartSlide: 2
 
-title: Welcome to Slidev
+title: Ruby in Japan vs the World
 titleTemplate: '%s - Osaka Web Designers and Developers Meetup'
-info: |
 
 # https://sli.dev/features/drawing
 drawings:
@@ -43,6 +42,12 @@ transition: slide-left
 <style>
   a {
     border-bottom: none !important;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 320% !important;
   }
 </style>
 
@@ -215,11 +220,22 @@ class: annotated-list
 
 ### Pros
 
- - Fast to develop with
+
+ - Easy and quick to start with
+
+   Non-steep learning curve
+
+ - Readable and expressive
+
+   Almost like English
+
+ - A lot of ready libraries
+
+   “There is a gem for that”
 
  - Nice and active community
 
-   MINASWAN: Matz is nice and so we are nice
+   [MINASWAN](https://en.wiktionary.org/wiki/MINASWAN): Matz is nice and so we are nice
 
 ::right::
 
@@ -255,11 +271,10 @@ layout: cover
 - 1993: Matz started working on Ruby
 - 1995: Ruby 0.95 released
 - 1996: Ruby 1.0 released
+- 2002: First English book about Ruby published
 - 2003: Ruby 1.8 released
 
 Ruby was mostly known in Japan and didn't have much traction.
-
-2002: First English book about Ruby was published
 
 ---
 
@@ -313,11 +328,19 @@ class: annotated-list
 
 - <logos-shopify class="float-left text-5xl mx-2 w-16" /> Shopify
 
-  Runs on Ruby on Rails, manages to serve . Sponsors a lot of Ruby development.
+  Runs on Ruby on Rails, manages to serve million RPS on Black Friday.
 
 - <logos-airbnb-icon class="float-left text-5xl mx-2 w-16" /> Airbnb
 
   Started with Ruby on Rails, but now uses a lot of other technologies.
+
+- <logos-heroku-icon class="float-left text-5xl mx-2 w-16" /> Heroku
+
+  Ruby on Rails was the first supported language on Heroku.
+
+<style>
+  ul { list-style-type: none; }
+</style>
 
 ---
 
@@ -333,6 +356,28 @@ class: annotated-list
 
   - Syntax changes for hashes, lambdas
 
+
+---
+class: annotated-list
+---
+
+## Alternative Rubies
+
+- MRI (Matz's Ruby Interpreter) - The original Ruby implementation written on C.
+
+- TruffleRuby - A high performance implementation built on the GraalVM.
+
+- JRuby - The Ruby Programming Language on the JVM
+
+  Java libraries can be called directly, but C-extensions are not supported.
+
+- mruby - lightweight partial implementation for embedded usage.
+
+- Artichoke - Bundle Ruby applications into a single WASM binary, Ruby implementation in Rust.
+
+and more: https://github.com/codicoscepticos/ruby-implementations
+
+<qr-code url="https://github.com/codicoscepticos/ruby-implementations" caption="Ruby implementations" class="w-36 absolute bottom-48px right-60px" />
 
 ---
 class: annotated-list
@@ -356,7 +401,7 @@ Level of user experience provided by Ruby itself inspired the community to creat
 
 - Capistrano — deployment tool for old server days
 
-  Inspired Ansible, Chef, Puppet
+  Inspired many deploy tools like Ansistrano on top of Ansible
 
 ---
 
@@ -376,6 +421,7 @@ Level of user experience provided by Ruby itself inspired the community to creat
 
 - Vagrant – virtual machine management
 
+- [DragonRuby](https://dragonruby.org) – game development
 
 ---
 
@@ -409,17 +455,21 @@ Why lockdowns and Ruby are a perfect match?
 
   - Fibers: cooperative multitasking
 
-  - Type checking with RBS
+  - Type definitions and checking with RBS
 
-  - Ruby 3x3: Ruby 3.0 times faster than Ruby 2.0
+  - Ruby 3x3: Ruby 3.0 is 3 times faster than Ruby 2.0 (thanks to JIT)
 
-    - Mainly thanks to JIT compiler (many of them)
+  - Syntax changes: pattern matching, deconstructions, …
+
+  - …and many more changes: [Ruby Evolution](https://rubyreferences.github.io/rubychanges/evolution.html)
 
 - Rails 7 (2021) and 8 (2024): one-man-band framework for modern web development
 
   - Hotwire: modern, HTML-over-the-wire approach
 
   - Turbo: fast, seamless navigation
+
+<qr-code url="https://rubyreferences.github.io/rubychanges/evolution.html" caption="Ruby Evolution" class="w-36 absolute bottom-148px right-60px" />
 
 ---
 
@@ -432,7 +482,6 @@ Ruby is still a great language for new startups:
 </a>
 
 <qr-code url="https://evilmartians.com/chronicles/startups-on-rails-in-2024-my-keynote-at-railsconf" caption="Startups on Rails in 2024" class="w-36 absolute bottom-48px right-60px" />
-
 
 ---
 layout: cover
@@ -459,6 +508,7 @@ class: annotated-list
  - Biggest Ruby conferences are in Japan
 
    RubyKaigi: 1500+ attendees in 2024
+
    Kaigi on Rails: 700+ attendees in 2024
 
  - And a lot of regional Ruby conferences and meetups
@@ -469,11 +519,11 @@ class: annotated-list
 
  - Ruby is behind Python, Java, and Go[^2]
 
-   Ranked 8th in popularity
+   Ranked 8th in popularity (21th worldwide by [TIOBE](https://www.tiobe.com/tiobe-index/))
 
  - And isn't highest paid one too
 
-   With salaries ranked 9th from ¥4.1 M per year
+   With salaries ranked 9th from ¥4.1M per year
 
 </div>
 </div>
@@ -482,6 +532,39 @@ class: annotated-list
 [^2]: https://www.tokhimo.com/post/popular-programming-languages-in-japan-2022-1
 
 ---
+class: annotated-list
+---
+
+## Ruby in Japanese companies
+
+- [Cookpad](https://cookpad.com/) – recipe sharing platform
+
+  Huge Ruby on Rails monolith, 100+ Ruby developers, core Ruby contributors
+
+- [SmartHR](https://smarthr.jp) – HR platform
+
+- [Money Forward](https://moneyforward.com) – personal finance management
+
+- [RIZAP](https://www.rizap.jp) – unmanned gyms [chocoZAP](https://chocozap.jp/)
+
+- [ANDPAD](https://andpad.co.jp) – construction management platform
+
+- [Timee](https://timee.co.jp) – scheduling platform for gig workers
+
+- [STORES](https://stores.fun/) – e-commerce platform
+
+- [Qiita](https://qiita.com) - tech blogging platform
+
+- [KOMOJU](https://komoju.com) – payment gateway for cross-border e-commerce
+
+<qr-code url="https://rubykaigi.org/2025/sponsors/" caption="RubyKaigi sponsors" class="w-36 absolute bottom-48px right-60px" />
+
+<!--
+Just take a look at sponsor list for [RubyKaigi](https://rubykaigi.org/2025/sponsors/) and [Kaigi on Rails](https://kaigionrails.org/2024/sponsors/)!
+-->
+---
+class: annotated-list
+---
 
 ## Ruby usage diversity in Japan
 
@@ -489,17 +572,64 @@ Not only web development!
 
  - mRuby for embedded systems
  
-   From keyboards to satellites
+   From keyboards ([KeebKaigi](https://keebkaigi.org)) to satellites
 
  - Popular for educational purposes 
  
-   Taught from schools and universities.
+   Often taught in schools and universities.
    
-   E.g. [SmalRuby](https://smalruby.app) – visual Ruby programming for kids: 
+   Also [SmalRuby](https://smalruby.app) – visual Ruby programming for kids.
 
  - Collaborations with government
 
    E.g. [Ruby City MATSUE](https://www.city.matsue.lg.jp/sangyo_business/sangyoshinko/RubyCityMATSUE/index.html)
+
+---
+layout: two-cols-header
+class: annotated-list
+---
+
+# Let's go Ruby?
+
+::left::
+
+Read books and docs:
+
+- [Ruby Quickstart](https://www.ruby-lang.org/en/documentation/quickstart/) on the official site
+
+  and [in-browser Ruby Playground](https://try.ruby-lang.org) 
+
+- [Programming Ruby](https://pragprog.com/titles/ruby5/programming-ruby-3-3-5th-edition/) aka “Pickaxe book”
+
+- [Agile Web Development with Rails](https://pragprog.com/titles/rails8/agile-web-development-with-rails-8/)
+
+- [Practical Object-Oriented Design Ruby](https://www.poodr.com)
+
+- [Layered design for RoR applications](https://www.packtpub.com/en-us/product/layered-design-for-ruby-on-rails-applications-9781801813785)
+
+  Martian book with recipes for growing apps
+
+- [Ruby under a microscope](https://patshaughnessy.net/ruby-under-a-microscope)
+
+  for in-depth understanding of how Ruby works
+
+
+::right::
+
+Attend meetups and conferences:
+
+  - [RubyKaigi](https://rubykaigi.org)
+  - [Kaigi on Rails](https://kaigionrails.org)
+
+And local ones too!
+
+  - [Kyobashi.rb](https://kyobashirb.connpass.com) meetup
+  - [Kansai RubyKaigi #08](https://regional.rubykaigi.org/kansai08/) conference
+  - [Naniwa.rb](https://naniwarb.doorkeeper.jp/) meetup
+  - [Ruby Tuesday](https://ruby-tuesday.doorkeeper.jp/) meetup (usually online)
+  - … (that list isn't exhaustive!)
+
+<!-- Meet-ups are on Japanese of course -->
 
 ---
 layout: cover
@@ -507,7 +637,7 @@ layout: cover
 
 # Thank you!
 
-<div class="grid grid-cols-[8rem_3fr_4fr] mt-6 gap-2">
+<div class="grid grid-cols-[8rem_3fr_4fr] mt-3 gap-2">
 
 <div class="justify-self-start">
 <img alt="Andrey Novikov" src="https://secure.gravatar.com/avatar/d0e95abdd0aed671ebd0920c16d393d4?s=512" class="w-32 h-32 object-contain" />
@@ -544,14 +674,19 @@ layout: cover
 
 Our awesome blog: <span v-mark.orange class="font-bold">[evilmartians.com/chronicles](https://evilmartians.com/chronicles/?utm_source=owddm&utm_medium=slides&utm_campaign=ruby-in-japan-vs-world)</span>!
 
-<PoweredBySlidev absolute right-10 bottom-10 text-sm />
+These slides are here: [envek.github.io/owddm-ruby-in-japan-vs-world](https://envek.github.io/owddm-ruby-in-japan-vs-world/)
+
+<PoweredBySlidev absolute right-10 bottom-23 text />
+
+<qr-code url="https://envek.github.io/owddm-ruby-in-japan-vs-world/" caption="Slides are here" class="w-50 absolute bottom-200px right-40px" />
 
 </div>
 </div>
 
 <style>
-  h1 { margin-bottom: 4px; }
+  h1 { margin-bottom: 0; }
   ul a { border-bottom: none !important; }
   ul { list-style-type: none !important; }
   ul li { margin-left: 0; padding-left: 0; }
+  p { margin-top: 0; }
 </style>
