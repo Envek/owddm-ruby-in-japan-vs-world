@@ -186,28 +186,37 @@ end
 
 See [`activesupport/lib/active_support/core_ext/numeric/time.rb`](https://github.com/rails/rails/blob/e9d7ca5e0b834ff2ce3d43965deac670ff8ac790/activesupport/lib/active_support/core_ext/numeric/time.rb) in Ruby on Rails.
 
+<!--
+Here is also an example of monkey patching: we reopen `Numeric` class and define `month` method that returns `ActiveSupport::Duration` object.
+-->
+
 ---
 
 ## Functional
 
-Callable blocks (procs and lambdas)
+Callable blocks (procs and lambdas) with closures
 
 ```ruby
 # Define a lambda
-l = ->(x) { x + 1 }
+y, l = 1, ->(x) { x + y }
 
 # Call it
-l.call(2)
-# => 3
+l.call(2) # => 3
 
 # Use it for collection transformation
-[1, 2, 3].map(&l)
-# => [2, 3, 4]
+[1, 2, 3].map(&l).    # => [2, 3, 4]
+          reduce(&:+) # => 9
 ```
 
 More about this in [Threads, callbacks, and execution context in Ruby](https://envek.github.io/rubyconfau-threads-callbacks/) 
 
 <qr-code url="https://envek.github.io/rubyconfau-threads-callbacks/" caption="Threads, callbacks… talk" class="w-36 absolute bottom-48px right-60px" />
+
+<!--
+Ruby has a lot of functional programming features, like blocks, procs, and lambdas. They are used for callbacks, collection transformations, and more.
+
+Blocks are very idiomatic for the language. In Ruby for loops are rarely used, instead, we use `each` or `map` that accept blocks to iterate over collections.
+-->
 
 ---
 layout: two-cols-header
@@ -538,8 +547,6 @@ class: annotated-list
 ## Ruby in Japanese companies
 
 - [Cookpad](https://cookpad.com/) – recipe sharing platform
-
-  Huge Ruby on Rails monolith, 100+ Ruby developers, core Ruby contributors
 
 - [SmartHR](https://smarthr.jp) – HR platform
 
